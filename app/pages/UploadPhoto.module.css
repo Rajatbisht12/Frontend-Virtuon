@@ -2,7 +2,7 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgb(252, 245, 245);
+    background-color: white;
     color: black;
   }
   
@@ -16,13 +16,13 @@
   .backButton {
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 40px;
     cursor: pointer;
     color: black;
   }
   
   .cartIcon {
-    font-size: 24px;
+    font-size: 30px;
     color: black;
   }
   

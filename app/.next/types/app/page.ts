@@ -1,4 +1,4 @@
-// File: /home/rajat-bisht11/Desktop/app/app/page.js
+// File: /home/rajat-bisht11/Desktop/Virtuon/app/app/page.js
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

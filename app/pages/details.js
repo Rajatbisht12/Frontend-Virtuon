@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './style.module.css';
-
+import { HiArrowLeftCircle } from "react-icons/hi2";
+import { HiShoppingCart } from "react-icons/hi";
 const Details = () => {
   
   const [formData, setFormData] = useState({
@@ -29,8 +30,8 @@ const Details = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <button className={styles.backButton}>←</button>
-        <div className={styles.cartIcon}>🛒</div>
+        <button className={styles.backButton}><HiArrowLeftCircle /></button>
+        <div className={styles.cartIcon}><HiShoppingCart /></div>
       </div>
       <div className={styles.progressBar}></div>
       <h1 className={styles.title}>Enter details</h1>

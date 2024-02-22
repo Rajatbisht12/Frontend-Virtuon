@@ -1,7 +1,10 @@
 "use client"
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './UploadPhoto.module.css';
+import Link from 'next/link';
+import { HiArrowLeftCircle } from "react-icons/hi2";
+import { HiShoppingCart } from "react-icons/hi";
 
 const UploadPhoto = () => {
   const [agreedToTerms, setAgreedToTerms] = useState(false);
@@ -9,6 +12,7 @@ const UploadPhoto = () => {
   const fileInputRef = useRef(null);
   const videoRef = useRef(null);
   const [showCamera, setShowCamera] = useState(false);
+  const [stream, setStream] = useState(null);
 
   const handleUpload = () => {
     if (agreedToTerms) {
@@ -37,16 +41,23 @@ const UploadPhoto = () => {
 
   const startCamera = async () => {
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-        setShowCamera(true);
-      }
+      console.log("Attempting to access camera...");
+      const mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
+      console.log("Camera access granted, stream obtained:", mediaStream);
+      setStream(mediaStream);
+      setShowCamera(true);
     } catch (err) {
       console.error("Error accessing camera:", err);
       alert("Unable to access camera. Please make sure you've granted permission.");
     }
   };
+
+  useEffect(() => {
+    if (stream && videoRef.current && !videoRef.current.srcObject) {
+      console.log("Setting video srcObject");
+      videoRef.current.srcObject = stream;
+    }
+  }, [stream]);
 
   const capturePhoto = () => {
     const canvas = document.createElement('canvas');
@@ -70,8 +81,10 @@ const UploadPhoto = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <button className={styles.backButton}>←</button>
-        <div className={styles.cartIcon}>🛒</div>
+      <Link href="/" passHref>
+        <button className={styles.backButton}><HiArrowLeftCircle /></button>
+      </Link>
+        <div className={styles.cartIcon}><HiShoppingCart /></div>
       </div>
       <div className={styles.progressBar}></div>
       <h1 className={styles.title}>Upload photo</h1>
@@ -95,11 +108,17 @@ const UploadPhoto = () => {
         </button>
       </div>
       {showCamera && (
-        <div className={styles.cameraContainer}>
-          <video ref={videoRef} autoPlay playsInline />
-          <button onClick={capturePhoto} className={styles.captureButton}>Capture</button>
-        </div>
-      )}
+  <div className={styles.cameraContainer}>
+    {stream ? (
+      <>
+        <video ref={videoRef} autoPlay playsInline />
+        <button onClick={capturePhoto} className={styles.captureButton}>Capture</button>
+      </>
+    ) : (
+      <p>Loading camera...</p>
+    )}
+  </div>
+)}
       {selectedFile && (
         <p className={styles.selectedFile}>Selected: {selectedFile.name}</p>
       )}

@@ -19,16 +19,14 @@
 .style_backButton__GapEx {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 40px;
   cursor: pointer;
-  color: #e0e0e0;
-  background-color: #333;
   border-radius: 100%;
   
 }
 
 .style_cartIcon__lVTko {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .style_progressBar__yWwS_ {
@@ -41,7 +39,7 @@
   content: '';
   display: block;
   height: 100%;
-  width: 30%;
+  width: 50%;
   background-color: #007bff;
 }
 
