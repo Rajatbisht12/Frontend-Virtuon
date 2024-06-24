@@ -1,0 +1,127 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./pages/style.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+.style_container__KlgEh {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  
+}
+
+.style_header__ugDKY {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.style_backButton__GapEx {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #e0e0e0;
+  background-color: #333;
+  border-radius: 100%;
+  
+}
+
+.style_cartIcon__lVTko {
+  font-size: 24px;
+}
+
+.style_progressBar__yWwS_ {
+  height: 4px;
+  background-color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.style_progressBar__yWwS_::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 30%;
+  background-color: #007bff;
+}
+
+.style_title___amYE {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.style_subtitle__dzuKI {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.style_form__D4S0Z {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.style_inputGroup__gyefu {
+  display: flex;
+  flex-direction: column;
+}
+
+.style_inputGroup__gyefu label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.style_inputGroup__gyefu input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.style_buttonGroup__E2e1x {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.style_skipButton__YrsVt, .style_continueButton__yccCF {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.style_skipButton__YrsVt {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.style_continueButton__yccCF {
+  background-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .style_container__KlgEh {
+    padding: 10px;
+  }
+
+  .style_title___amYE {
+    font-size: 20px;
+  }
+
+  .style_subtitle__dzuKI {
+    font-size: 12px;
+  }
+
+  .style_inputGroup__gyefu input {
+    font-size: 14px;
+  }
+
+  .style_skipButton__YrsVt, .style_continueButton__yccCF {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

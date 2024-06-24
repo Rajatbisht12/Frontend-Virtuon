@@ -1,0 +1,124 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #e0e0e0;
+  background-color: #333;
+  border-radius: 100%;
+  
+}
+
+.cartIcon {
+  font-size: 24px;
+}
+
+.progressBar {
+  height: 4px;
+  background-color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.progressBar::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 30%;
+  background-color: #007bff;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.inputGroup input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.skipButton, .continueButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.skipButton {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.continueButton {
+  background-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .inputGroup input {
+    font-size: 14px;
+  }
+
+  .skipButton, .continueButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

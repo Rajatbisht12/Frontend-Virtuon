@@ -1,0 +1,157 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(252, 245, 245);
+    color: black;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .backButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+  }
+  
+  .cartIcon {
+    font-size: 24px;
+    color: black;
+  }
+  
+  .progressBar {
+    height: 4px;
+    background-color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .progressBar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #007bff;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 20px;
+  }
+  
+  .uploadOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .uploadButton, .clickPhotoButton {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .uploadIcon, .cameraIcon {
+    margin-right: 10px;
+  }
+  
+  .orText {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .termsContainer {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .termsContainer input {
+    margin-right: 10px;
+  }
+  
+  .termsContainer label {
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .uploadButton:last-child {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .uploadButton:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+
+  .cameraContainer {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .cameraContainer video {
+    width: 100%;
+    height: auto;
+  }
+  
+  .captureButton {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .selectedFile {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .subtitle {
+      font-size: 12px;
+    }
+  
+    .uploadButton, .clickPhotoButton {
+      font-size: 14px;
+    }
+  }
