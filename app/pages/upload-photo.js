@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styles from './UploadPhoto.module.css';
 import Link from 'next/link';
 import { HiArrowLeftCircle } from "react-icons/hi2";
-import { HiShoppingCart } from "react-icons/hi";
+
 
 const UploadPhoto = () => {
   const [agreedToTerms, setAgreedToTerms] = useState(false);
@@ -84,7 +84,6 @@ const UploadPhoto = () => {
       <Link href="/" passHref>
         <button className={styles.backButton}><HiArrowLeftCircle /></button>
       </Link>
-        <div className={styles.cartIcon}><HiShoppingCart /></div>
       </div>
       <div className={styles.progressBar}></div>
       <h1 className={styles.title}>Upload photo</h1>

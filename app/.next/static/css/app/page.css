@@ -73,7 +73,7 @@
 .style_inputGroup__gyefu input {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 15px;
   font-size: 16px;
 }
 
@@ -92,11 +92,17 @@
 }
 
 .style_skipButton__YrsVt {
-  background-color: #f0f0f0;
-  color: #333;
+  /* background-color: #f0f0f0; */
+  color: #615b5b;
+  font-weight: bolder;
 }
 
 .style_continueButton__yccCF {
+  background-color: #007bff;
+  color: white;
+}
+
+.style_continueButton__yccCF:hover {
   background-color: #007bff;
   color: white;
 }
@@ -116,6 +122,7 @@
 
   .style_inputGroup__gyefu input {
     font-size: 14px;
+    border-radius: 14px;
   }
 
   .style_skipButton__YrsVt, .style_continueButton__yccCF {
