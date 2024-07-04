@@ -4,6 +4,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import styles from './UploadPhoto.module.css';
 import Link from 'next/link';
 import { HiArrowLeftCircle } from "react-icons/hi2";
+import { FiUploadCloud } from "react-icons/fi";
+import { FcCompactCamera } from "react-icons/fc";
 
 
 const UploadPhoto = () => {
@@ -99,11 +101,11 @@ const UploadPhoto = () => {
           style={{ display: 'none' }}
         />
         <button className={styles.uploadButton} onClick={openFileDialog}>
-          <span className={styles.uploadIcon}>⬆️</span> Upload photo
+          <span className={styles.uploadIcon}><FiUploadCloud /></span> Upload photo
         </button>
         <p className={styles.orText}>or</p>
         <button className={styles.clickPhotoButton} onClick={startCamera}>
-          <span className={styles.cameraIcon}>📷</span> Click photo
+          <span className={styles.cameraIcon}><FcCompactCamera /></span> Click photo
         </button>
       </div>
       {showCamera && (
@@ -133,7 +135,7 @@ const UploadPhoto = () => {
         </label>
       </div>
       <button 
-        className={styles.uploadButton}
+        className={styles.uploadButton1}
         onClick={handleUpload}
         disabled={!agreedToTerms || !selectedFile}
       >
