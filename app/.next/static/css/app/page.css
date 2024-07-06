@@ -77,7 +77,7 @@
   border: 1px solid #ccc;
   border-radius: 15px;
   font-size: 16px;
-  background-color: #8d86866b;
+  background-color: #ada9a9a6;
 }
 
 .style_buttonGroup__E2e1x {
@@ -95,14 +95,13 @@
 
 .style_skipButton__YrsVt {
   /* background-color: #f0f0f0; */
-  color: #615b5b;
+  color: #9b9797;
   font-weight: bolder;
-  border: 2px solid #615b5b;
   /* font-family: greycliff CF; */
 }
 
 .style_skipButton__YrsVt:hover {
-  background-color: #615b5b;
+  background-color: #c2c1c1;
   color: #f0f0f0;
   font-weight: bolder;
 }
@@ -118,7 +117,7 @@
   background-color: white;
   color: #007bff;
   border-color: #007bff;
-  border: 2px solid #007bff;
+  transition: all 4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 @media (max-width: 480px) {
